@@ -22,6 +22,7 @@ function mushroom(e) {
   if(e.fileName) console.log(e.fileName);
   console.log(e.message);
   require('beepbeep')(2);
+  notify("Error!" + e.message);
   this.emit('end');
 }
 
@@ -49,7 +50,7 @@ gulp.task('css', function() {
         require('css-mqpacker')
     ];
   	return gulp.src(css)
-      .pipe(changed(dest))
+    //   .pipe(changed(dest))
       .pipe(mario(mushroom))
       .pipe(sourcemaps.init())
       .pipe(postcss(processors))
@@ -67,7 +68,8 @@ gulp.task('stream', function () {
         server: "./dist"
     });
 
-    gulp.watch('src/css/**/*.css', ['css','reload']);
+	gulp.watch('src/css/*.css', ['css','reload']);
+	gulp.watch('src/css/**/*.css', ['css','reload']);
     gulp.watch('src/js/**/*.js', ['scripts','reload']);
     gulp.watch('dist/*.html', ['reload']);
 

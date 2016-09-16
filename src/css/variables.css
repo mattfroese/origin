@@ -1,0 +1,14 @@
+$color-brand: #617c8b;
+
+$font-body: 10pt Arial, Helvetica, sans-serif;
+
+$font-heading: $font-body;
+$font-nav: $font-body;
+
+
+$navbar-text-color: #fff;
+$navbar-bg-color: transparent;
+$navbar-scrolled-text-color: $color-brand;
+$navbar-scrolled-bg-color: #fff;
+
+$section-dark-bg-color: black;

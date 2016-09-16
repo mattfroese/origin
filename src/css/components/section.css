@@ -1,0 +1,9 @@
+section.content {
+	padding: 80px 0;
+	text-align: center;
+
+	&.dark {
+		background: $section-dark-bg-color;
+	}
+
+}

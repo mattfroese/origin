@@ -1,0 +1,41 @@
+.navbar {
+	background: transparent;
+	border: 0 none;
+	transition: min-height ease 0.8s;
+
+	.navbar-brand {
+		transition: all ease 0.8s;
+		color: $navbar-text-color;
+	}
+	.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	    background-color: transparent;
+	}
+	.navbar-nav > li > a {
+		transition: all ease 0.8s;
+		color: $navbar-text-color;
+		&:hover, &:focus {
+			background: transparent;
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+	&.navbar-scrolled {
+		background: $navbar-scrolled-bg-color;
+		.navbar-brand {
+			color: $navbar-scrolled-text-color;
+		}
+		.navbar-nav > li > a {
+			color: $navbar-scrolled-text-color;
+		}
+	}
+}
+
+.navbar-xs { min-height:28px; height: 28px; }
+.navbar-xs .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 28px; }
+.navbar-xs .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 28px; }
+
+.navbar-xl { min-height:80px; height: 80px; }
+.navbar-xl .navbar-brand{ padding: 0px 20px;font-size: 26px;line-height: 80px; }
+.navbar-xl .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 80px; }

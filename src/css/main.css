@@ -1,1 +1,19 @@
+@import "variables.css";
+
+@import "components/navbar.css";
 @import "components/hero.css";
+@import "components/section.css";
+
+html {
+    height: 100%;
+}
+body {
+	font: $font-body;
+    height: 100%;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+section.content {
+}
