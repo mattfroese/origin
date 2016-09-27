@@ -1,7 +1,10 @@
-section.content {
+section.page {
 	padding: 80px 0;
 	text-align: center;
 
+	.content {
+		position: relative;
+	}
 	&.dark {
 		background: $section-dark-bg-color;
 	}

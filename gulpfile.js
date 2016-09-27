@@ -9,9 +9,10 @@ const notify = require('gulp-notify');
 
 var scripts = [
 	'./bower_components/jquery/dist/jquery.js',
-    './bower_components/bootstrap/dist/js/bootstrap.js',
-    './src/js/**/*.js',
-    './src/js/*.js'
+	'./bower_components/bootstrap/dist/js/bootstrap.js',
+	'./bower_components/parallax.js/parallax.js',
+	'./src/js/**/*.js',
+	'./src/js/*.js'
 ],
 css = [
     'bower_components/bootstrap/dist/css/bootstrap.css',

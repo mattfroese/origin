@@ -1,5 +1,5 @@
 {
-  "name": "aura",
+  "name": "origin",
   "description": "",
   "main": "",
   "moduleType": [],
@@ -14,6 +14,7 @@
     "tests"
   ],
   "devDependencies": {
-    "bootstrap": "~3.3.7"
+    "bootstrap": "~3.3.7",
+    "parallax.js": "^1.4.2"
   }
 }
