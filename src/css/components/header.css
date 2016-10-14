@@ -1,0 +1,136 @@
+#header {
+	background-color: #fff;
+    z-index: 99;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	&.header-transparent{
+		background-color: transparent;
+		#logo a,
+		.nav>li>a {
+			color: #fff;
+		}
+	}
+	&.header-dark{
+		background-color: $color-dark;
+		#logo a,
+		.nav>li>a {
+			color: #fff;
+		}
+	}
+
+	#resposive-nav-toggle {
+		float: right;
+		padding: 17px 0;
+		&:hover, &:focus {
+    		text-decoration: none;
+		}
+		i {
+			display: block;
+		}
+		@media (min-width:$screen-sm-min) {
+			display: none;
+		}
+	}
+	#logo {
+		float:left;
+		a {
+			transition: all .5s ease;
+			font-size: 1.4em;
+			padding: 12px 0;
+			display: block;
+			color: #000;
+			&:hover, &:focus {
+				color: $color-brand;
+	    		text-decoration: none;
+			}
+		}
+	}
+	#primary-nav {
+		transition: height .5s ease;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+		margin: 0 -15px;
+		&.show {
+			height: auto;
+		}
+		@media (min-width:$screen-sm-min) {
+			clear: none;
+			height: auto;
+			overflow: auto;
+			margin: 0;
+		}
+	}
+	.nav {
+		transition: all .5s ease;
+		>li {
+			@media (min-width:$screen-sm-min) {
+				float: left;
+			}
+			>a {
+				transition: all .5s ease;
+				padding: 17px 15px;
+				color: #000;
+				&:hover {
+					background: $color-brand;
+					color: #fff;
+				}
+				@media (min-width:$screen-sm-min) {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+	/* Sizing for scrolled */
+	&.scrolled {
+		background-color: #fff;
+		&.header-dark {
+			background-color: $color-dark;
+		}
+		&.header-transparent {
+			#logo a,
+			.nav>li>a {
+				color: $color-dark;
+			}
+		}
+		#logo a {
+			padding: 12px 0;
+			font-size: 1.4em;
+		}
+		.nav>li>a{
+			margin: 0;
+			padding-top: 17px;
+			padding-bottom: 17px;
+		}
+		@media (min-width:$screen-sm-min) {
+			.support-nav {
+				transform: translateY(-130%);
+				height: 0;
+				overflow: hidden;
+			}
+		}
+	}
+	/* Sizing for > phone */
+	@media (min-width:$screen-sm-min) {
+		#logo a {
+			padding: 20px 0;
+			font-size: 2em;
+		}
+		#resposive-nav-toggle {
+			margin: 0;
+			padding-top: 13px;
+			padding-bottom: 13px;
+		}
+		.nav>li>a{
+			margin: 14px 0;
+			padding: 18px 15px;
+		}
+		nav .right {
+			float: right;
+			clear: right;
+		}
+	}
+
+}

@@ -1,5 +1,6 @@
 @import "variables.css";
 
+@import "components/header.css";
 @import "components/navbar.css";
 @import "components/hero.css";
 @import "components/section.css";
@@ -8,12 +9,8 @@ html {
     height: 100%;
 }
 body {
-	font: $font-body;
+	font: $font-body-size $font-body;
     height: 100%;
     color: #333;
     -webkit-font-smoothing: antialiased;
-}
-
-
-section.content {
 }

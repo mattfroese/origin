@@ -1,14 +1,21 @@
-$color-brand: #617c8b;
+$color-brand: #267DF4;
+$color-dark: dimgrey;
 
-$font-body: 10pt Arial, Helvetica, sans-serif;
+$font-body-size: 11pt;
+$font-body: 'Poppins', sans-serif;
 
 $font-heading: $font-body;
 $font-nav: $font-body;
-
 
 $navbar-text-color: #fff;
 $navbar-bg-color: transparent;
 $navbar-scrolled-text-color: $color-brand;
 $navbar-scrolled-bg-color: #fff;
 
-$section-dark-bg-color: lightGrey;
+$section-dark-bg-color: $color-dark;
+$section-dark-font-color: $color-dark;
+
+$screen-xs-max: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;

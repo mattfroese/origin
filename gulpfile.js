@@ -58,8 +58,7 @@ gulp.task('css', function() {
       .pipe(concat('main.css'))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(dest))
-      .pipe(notify("css complete"))
-      .pipe(browserSync.stream());
+      .pipe(notify("css complete"));
 });
 
 gulp.task('reload', function() { browserSync.reload(); });
@@ -69,8 +68,8 @@ gulp.task('stream', function () {
         server: "./dist"
     });
 
-	gulp.watch('src/css/*.css', ['css','reload']);
-	gulp.watch('src/css/**/*.css', ['css','reload']);
+	gulp.watch('dist/css/main.css', ['reload']);
+	gulp.watch('src/css/**/*.css', ['css']);
     gulp.watch('src/js/**/*.js', ['scripts','reload']);
     gulp.watch('dist/*.html', ['reload']);
 

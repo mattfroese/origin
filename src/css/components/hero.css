@@ -1,7 +1,7 @@
 section.hero {
     overflow: hidden;
     position: relative;
-    height: 95%;
+    height: 100%;
     text-align: center;
     .bg {
         position: absolute;
