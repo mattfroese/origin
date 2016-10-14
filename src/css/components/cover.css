@@ -1,4 +1,4 @@
-section.hero {
+.cover {
     overflow: hidden;
     position: relative;
     height: 100%;
@@ -17,5 +17,26 @@ section.hero {
         top: 40%;
         left: 0;
         right: 0;
+
+		h1 {
+			font-size: 6rem;
+		}
     }
+}
+.multi-cover,
+.multi-cover .owl-wrapper-outer,
+.multi-cover .owl-wrapper,
+.multi-cover .owl-item {
+	height: 100%;
+}
+.multi-cover {
+	.cover .content {
+		opacity: 0;
+		transform: translateY(3%);
+		transition: ease all 1s;
+	}
+	.active .cover .content {
+		transform: translateX(0%);
+		opacity: 1;
+	}
 }

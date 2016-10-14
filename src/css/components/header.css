@@ -1,30 +1,27 @@
 #header {
 	background-color: #fff;
-    z-index: 99;
+	z-index: 99;
 	position: fixed;
 	top: 0;
 	width: 100%;
-
-	&.header-transparent{
+	&.header-transparent {
 		background-color: transparent;
-		#logo a,
-		.nav>li>a {
+		#logo a, .nav>li>a, #resposive-nav-toggle {
 			color: #fff;
 		}
 	}
-	&.header-dark{
+	&.header-dark {
 		background-color: $color-dark;
-		#logo a,
-		.nav>li>a {
+		#logo a, .nav>li>a {
 			color: #fff;
 		}
 	}
-
 	#resposive-nav-toggle {
+		cursor: pointer;
 		float: right;
 		padding: 17px 0;
 		&:hover, &:focus {
-    		text-decoration: none;
+			text-decoration: none;
 		}
 		i {
 			display: block;
@@ -34,16 +31,17 @@
 		}
 	}
 	#logo {
-		float:left;
+		float: left;
 		a {
 			transition: all .5s ease;
 			font-size: 1.4em;
 			padding: 12px 0;
+			margin-right: 10px;
 			display: block;
 			color: #000;
 			&:hover, &:focus {
 				color: $color-brand;
-	    		text-decoration: none;
+				text-decoration: none;
 			}
 		}
 	}
@@ -66,7 +64,7 @@
 	.nav {
 		transition: all .5s ease;
 		>li {
-			@media (min-width:$screen-sm-min) {
+			@media (min-width: $screen-sm-min) {
 				float: left;
 			}
 			>a {
@@ -84,14 +82,14 @@
 		}
 	}
 	/* Sizing for scrolled */
+	&.nav-in,
 	&.scrolled {
 		background-color: #fff;
 		&.header-dark {
 			background-color: $color-dark;
 		}
 		&.header-transparent {
-			#logo a,
-			.nav>li>a {
+			#logo a, .nav>li>a, #resposive-nav-toggle {
 				color: $color-dark;
 			}
 		}
@@ -99,7 +97,7 @@
 			padding: 12px 0;
 			font-size: 1.4em;
 		}
-		.nav>li>a{
+		.nav>li>a {
 			margin: 0;
 			padding-top: 17px;
 			padding-bottom: 17px;
@@ -123,14 +121,18 @@
 			padding-top: 13px;
 			padding-bottom: 13px;
 		}
-		.nav>li>a{
+		.nav>li>a {
 			margin: 14px 0;
 			padding: 18px 15px;
 		}
-		nav .right {
-			float: right;
-			clear: right;
+		nav {
+			.nav {
+				float: left;
+				&.right {
+					float: right;
+					clear: right;
+				}
+			}
 		}
 	}
-
 }

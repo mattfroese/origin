@@ -11,11 +11,14 @@ var scripts = [
 	'./bower_components/jquery/dist/jquery.js',
 	'./bower_components/bootstrap/dist/js/bootstrap.js',
 	'./bower_components/parallax.js/parallax.js',
+	'./bower_components/owl-carousel/owl-carousel/owl.carousel.js',
 	'./src/js/**/*.js',
 	'./src/js/*.js'
 ],
 css = [
-    'bower_components/bootstrap/dist/css/bootstrap.css',
+    './bower_components/bootstrap/dist/css/bootstrap.css',
+	'./bower_components/owl-carousel/owl-carousel/owl.carousel.css',
+	'./bower_components/owl-carousel/owl-carousel/owl.transitions.css',
     'src/css/main.css'
 ];
 

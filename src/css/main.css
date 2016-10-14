@@ -1,8 +1,10 @@
 @import "variables.css";
 
+@import "effects/parallax.css";
+
 @import "components/header.css";
 @import "components/navbar.css";
-@import "components/hero.css";
+@import "components/cover.css";
 @import "components/section.css";
 
 html {

@@ -6,3 +6,9 @@ $(document).ready(function() {
   });
 
 })
+
+$(window).scroll(function() {
+    $('.parallax2').each(function() {
+		$(this).css("transform", "translateY(" + ($(window).scrollTop()) + "px)");
+	});
+});
