@@ -32,11 +32,38 @@
 .multi-cover {
 	.cover .content {
 		opacity: 0;
-		transform: translateY(3%);
-		transition: ease all 1s;
+		transform: translateY(22%);
+		transition: ease all 2s;
 	}
 	.active .cover .content {
 		transform: translateX(0%);
 		opacity: 1;
+	}
+	&:hover .owl-buttons {
+		opacity: 1;
+	}
+	.owl-buttons {
+		opacity: 0;
+		transition: ease all 500ms;
+	}
+	.owl-prev, .owl-next {
+		color: #fff;
+		position: absolute;
+		transform: translateY(-50%);
+		top: 50%;
+		left: 20px;
+		opacity: 0.4;
+		i {
+			font-size: 3em;
+			transition: ease all 500ms;
+		}
+		&:hover {
+			color: $color-dark;
+			opacity: 1;
+		}
+	}
+	.owl-next {
+		left: auto;
+		right: 20px;
 	}
 }

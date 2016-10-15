@@ -4,6 +4,13 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	.header {
+		transition: ease min-height 500ms;
+		min-height: 40px;
+	}
+	.container {
+		position: relative;
+	}
 	&.header-transparent {
 		background-color: transparent;
 		#logo a, .nav>li>a, #resposive-nav-toggle {
@@ -14,6 +21,57 @@
 		background-color: $color-dark;
 		#logo a, .nav>li>a {
 			color: #fff;
+		}
+	}
+	&.header-center {
+		#logo {
+			width: 100%;
+			margin: 0;
+			text-align: center;
+			position: absolute;
+			left: 0;
+			a {
+				margin: 0;
+			}
+		}
+	}
+	&.header-stacked {
+		@media (min-width:$screen-sm-min) {
+			.stack-nav>li>a {
+				padding: 10px 15px;
+			}
+			.support-nav {
+				margin-top: 10px;
+			}
+			.support-nav>li>a {
+				opacity: 0.4;
+			}
+		}
+	}
+	&.header-nav-below {
+		&.header-center {
+			#logo {
+				position: static;
+				padding: 22px 0;
+			}
+			@media (min-width:$screen-sm-min) {
+				#primary-nav > .nav {
+					float: none;
+					text-align: center;
+					> li {
+						display:inline-block;
+						float: none;
+					}
+				}
+			}
+		}
+		#primary-nav {
+			clear: both;
+			@media (min-width:$screen-sm-min) {
+				.nav>li>a {
+					padding: 12px 15px;
+				}
+			}
 		}
 	}
 	#resposive-nav-toggle {
@@ -33,7 +91,7 @@
 	#logo {
 		float: left;
 		a {
-			transition: all .5s ease;
+			transition: all 500ms ease;
 			font-size: 1.4em;
 			padding: 12px 0;
 			margin-right: 10px;
@@ -45,38 +103,106 @@
 			}
 		}
 	}
+
 	#primary-nav {
-		transition: height .5s ease;
-		height: 0;
+		transition: max-height 500ms ease;
 		overflow: hidden;
 		clear: both;
 		margin: 0 -15px;
+	    max-height: 0;
+	    overflow: scroll;
+
 		&.show {
-			height: auto;
+			max-height: 80vh;
 		}
 		@media (min-width:$screen-sm-min) {
 			clear: none;
 			height: auto;
-			overflow: auto;
+			overflow: visible;
 			margin: 0;
+			max-height: none;
 		}
 	}
 	.nav {
-		transition: all .5s ease;
+		transition: all 500ms ease;
+		&.full {
+			float: none;
+		}
+		&.has-mega {
+			> li {
+				position: static;
+			}
+		}
 		>li {
 			@media (min-width: $screen-sm-min) {
 				float: left;
 			}
 			>a {
-				transition: all .5s ease;
+				transition: all 500ms ease;
 				padding: 17px 15px;
 				color: #000;
-				&:hover {
+			}
+			> .sub-nav {
+				max-height: 0;
+				overflow: hidden;
+				transition: all ease 500ms;
+
+				@media (min-width: $screen-sm-min) {
+					min-width: 200px;
+					position: absolute;
+					.nav {
+						padding: 20px;
+					}
+					&.mega {
+						left: 0;
+						width: 100%;
+						.container {
+							padding: 20px;
+							background: $color-dark;
+						}
+						.nav {
+							padding: 0;
+						}
+					}
+
+				}
+				.col-md-4 {
+					padding: 0;
+				}
+				.nav {
+					background: $color-dark;
+					display: block;
+					float: none;
+					>li {
+						float: none;
+						display: block;
+						&:hover {
+							> a {
+								background: $color-brand;
+								color: #fff;
+							}
+						}
+						&.title,
+						>a {
+							display: block;
+							color: #fff;
+							margin: 0;
+							padding: 5px 10px;
+						}
+						&.title {
+							opacity: 0.4;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+			&:hover {
+				> .sub-nav {
+					max-height:600px;
+				}
+				> a {
 					background: $color-brand;
 					color: #fff;
-				}
-				@media (min-width:$screen-sm-min) {
-					margin: 15px 0;
 				}
 			}
 		}
@@ -93,14 +219,34 @@
 				color: $color-dark;
 			}
 		}
+		&.header-nav-below {
+			.header {
+				height: auto;
+			}
+			@media (min-width:$screen-sm-min) {
+				#logo {
+					display: none;
+				}
+				.header {
+					min-height: 0;
+				}
+			}
+		}
 		#logo a {
 			padding: 12px 0;
 			font-size: 1.4em;
 		}
-		.nav>li>a {
-			margin: 0;
-			padding-top: 17px;
-			padding-bottom: 17px;
+		.nav > li {
+			&:hover {
+				> a {
+					color: #fff;
+				}
+			}
+			>a {
+				margin: 0;
+				padding-top: 17px;
+				padding-bottom: 17px;
+			}
 		}
 		@media (min-width:$screen-sm-min) {
 			.support-nav {
@@ -122,8 +268,7 @@
 			padding-bottom: 13px;
 		}
 		.nav>li>a {
-			margin: 14px 0;
-			padding: 18px 15px;
+			padding: 32px 15px;
 		}
 		nav {
 			.nav {
