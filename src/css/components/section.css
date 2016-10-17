@@ -4,8 +4,12 @@ section.page {
 	.content {
 		position: relative;
 	}
+
+}
+
+body > section, body > footer {
 	&.dark {
+		color: #fff;
 		background: $section-dark-bg-color;
 	}
-
 }

@@ -2,7 +2,6 @@
     overflow: hidden;
     position: relative;
     height: 100%;
-
 	&.center {
 	    text-align: center;
 	}
@@ -22,6 +21,7 @@
         right: 0;
 		max-width: 1140px;
 		margin: 0 auto;
+		padding: 0 30px;
 
 		h1 {
 			font-size: 6rem;
@@ -35,13 +35,12 @@
 	height: 100%;
 }
 .multi-cover {
-	.cover .content {
-		opacity: 0;
-		transform: translateY(22%);
-		transition: ease all 2s;
+	.cover {
+		.content {
+			opacity: 0;
+		}
 	}
 	.active .cover .content {
-		transform: translateX(0%);
 		opacity: 1;
 	}
 	&:hover .owl-buttons {
@@ -56,8 +55,11 @@
 		position: absolute;
 		transform: translateY(-50%);
 		top: 50%;
-		left: 20px;
+		left: 0px;
 		opacity: 0.4;
+		@media (min-width:$screen-sm-min) {
+			left: 20px;
+		}
 		i {
 			font-size: 3em;
 			transition: ease all 500ms;
@@ -69,6 +71,10 @@
 	}
 	.owl-next {
 		left: auto;
-		right: 20px;
+		right: 0px;
+		@media (min-width:$screen-sm-min) {
+			left: auto;
+			right: 20px;
+		}
 	}
 }

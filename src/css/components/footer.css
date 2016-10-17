@@ -1,3 +1,36 @@
 footer {
-	background: $color-dark;	
+	padding: 60px 0;
+	font-size: 0.9em;
+
+	&.dark {
+		a {
+			color: #fff;
+		}
+	}
+
+	&.compact {
+		padding: 20px 0;
+	}
+	&.simple {
+		text-align: center;
+		p {
+			margin:2em 0;
+		}
+	}
+	.footer-nav {
+	    margin: 0;
+		padding: 0;
+		text-align: center;
+	    list-style: none;
+		> li {
+			display: inline-block;
+			> a {
+				padding: 0 12px;
+			}
+		}
+	}
+
+	p, .footer-nav {
+		margin: 14px 0;
+	}
 }

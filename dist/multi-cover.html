@@ -8,7 +8,7 @@
 	<title>Mutli-Cover | Origin | Template</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/origin.css">
 </head>
 
 <body>
@@ -60,7 +60,7 @@
 			</nav>
 		</div>
 	</header>
-	<section class="multi-cover">
+	<section class="multi-cover" data-navigation="true">
 		<div class="cover" style="background-image: url('/img/header.jpg'); background-size:cover;">
 			<div class="content">
 				<h1>Multi-Owl-Cover</h1>
@@ -86,26 +86,22 @@
 			</div>
 		</div>
 	</section>
-	<section class="page dark">
-		<div class="content container">
-			<h2>Darkend section</h2>
-
-			<p>Just some ordinary text
-				<br />with some breaks to provide
-				<br />cool text effects.</p>
-		</div>
-	</section>
 	<section class="page light">
-		<div class="content">
-			<h2>Regular section</h2>
+		<div class="container">
+			<h2>Options</h2>
 
-			<p>Just some ordinary text
-				<br />with some breaks to provide
-				<br />cool text effects.</p>
+			<p>Enable multi-cover by applying the multi-cover class and throwing multiply covers inside.</p>
+<pre><code>&lt;div class="multi-cover
+	data-autoplay="true|false"
+	data-pause-hover="true|false"
+	data-navigation="true|false"
+&gt;
+</code></pre>
+
 		</div>
 	</section>
 	<section class="page parallax" data-parallax-img="/img/header.jpg">
-		<div class="content">
+		<div class="container">
 			<h2>A Parallax</h2>
 
 			<p>Just some ordinary text
@@ -114,13 +110,13 @@
 		</div>
 	</section>
 	<section class="page dark">
-		<div class="content">
+		<div class="container">
 			<h2>Footer</h2>
 
 			<p>Every website needs them footers</p>
 		</div>
 	</section>
-	<script src="js/main.min.js"></script>
+	<script src="js/origin.js"></script>
 
 </body>
 
