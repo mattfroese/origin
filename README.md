@@ -1,6 +1,8 @@
-# Template
+# Origin
 
 This is a starting point for creating templates for web. Comes with bootstrap.
+
+**WARNING:*** As of current releases jquery and bootstrap are compiled into origin.js
 
 # Header
 

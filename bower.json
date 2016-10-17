@@ -1,23 +1,25 @@
 {
-  "name": "origin",
-  "description": "",
-  "main": "",
-  "moduleType": [],
-  "license": "MIT",
-  "homepage": "",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "devDependencies": {
-    "bootstrap": "~3.3.7",
-    "parallax.js": "^1.4.2"
-  },
-  "dependencies": {
-    "owl-carousel": "^1.3.2"
-  }
+    "name": "origin",
+    "version": "0.0.1",
+    "description": "",
+    "main": [
+	    "./dist/css/origin.css",
+	    "./dist/js/origin.js",
+	],
+    "moduleType": [],
+    "license": "MIT",
+    "homepage": "",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "owl-carousel": "^1.3.2",
+        "bootstrap": "~3.3.7",
+        "parallax.js": "^1.4.2"
+    }
 }
