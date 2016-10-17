@@ -36,7 +36,7 @@ gulp.task('scripts', function() {
       .pipe(changed(dest))
       .pipe(mario(mushroom))
       .pipe(sourcemaps.init())
-      .pipe(concat('main.min.js'))
+      .pipe(concat('origin.js'))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(dest))
       .pipe(notify("scripts complete"))
@@ -58,7 +58,7 @@ gulp.task('css', function() {
       .pipe(mario(mushroom))
       .pipe(sourcemaps.init())
       .pipe(postcss(processors))
-      .pipe(concat('main.css'))
+      .pipe(concat('origin.css'))
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(dest))
       .pipe(notify("css complete"));

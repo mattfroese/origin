@@ -14589,4 +14589,4 @@ $(window).scroll(function() {
 	});
 });
 
-//# sourceMappingURL=main.min.js.map
+//# sourceMappingURL=origin.js.map
