@@ -37,12 +37,23 @@ header.primary-header
 	&.header-nav-drop
 	&.header-scrolled
 
-	.meta
+	// for no-drop
+	> .container
+		> .nav-toggle
+		> .logo
+		[> .text .left|.right]
+		> nav
+			> a wrapper
+				> .nav.nav-left
+				> .nav.nav-right
+
+	// for nav-drop
+	> .container
 		> .nav-toggle
 		> .logo
 		[> .slogan-left .slogan-right]
-	nav
-		> a wrapper
+	> nav
+		> .container
 			> .nav.nav-left
 			> .nav.nav-right
 ```
