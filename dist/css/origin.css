@@ -276,6 +276,9 @@ section.section .bg {
 	overflow: hidden;
 	z-index: 21;
 }
+section.section .bg > img {
+	min-width: 100%;
+}
 section.section .container-fluid, section.section .container {
 	position: relative;
 	z-index: 22;
@@ -301,6 +304,9 @@ section.section.just-lead p {
 	max-width: 800px;
 	margin: 0 auto;
 }
+section.section.just-lead p + p {
+	margin-top: 2em;
+}
 
 body > footer.dark {
 	color: #fff;
@@ -317,6 +323,8 @@ body > footer.dark {
     border: 1px solid transparent;
 	background: #267DF4;
 	color: #fff;
+}.button:hover {
+	color: #fff;
 }.button.small {
 	padding: 4px 14px;
 	font-size: 0.8em;
@@ -332,12 +340,14 @@ body > footer.dark {
 	color: rgba(51,51,51,0.6);
 }.button.round {
 	border-radius: 6px;
+}.button.rounder {
+	border-radius: 24px;
 }section.call-to-action {
 	position: relative;
 	overflow: hidden;
 	padding: 20px;
 	text-align: center;
-	font-size: 1.3em;
+	font-size: 1.4em;
 }section.call-to-action.dark {
 	color: #fff;
 	background: rgba(51,51,51,0.6);

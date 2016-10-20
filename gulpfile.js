@@ -12,6 +12,8 @@ var scripts = [
 	'./bower_components/bootstrap/dist/js/bootstrap.js',
 	'./bower_components/parallax.js/parallax.js',
 	'./bower_components/owl-carousel/owl-carousel/owl.carousel.js',
+	'./bower_components/countUp.js/countUp.js',
+	'./bower_components/waypoints/lib/jquery.waypoints.js',
 	'./src/js/**/*.js',
 	'./src/js/*.js'
 ],
@@ -72,8 +74,9 @@ gulp.task('stream', function () {
     });
 
 	gulp.watch('dist/css/*.css', ['reload']);
+	gulp.watch('dist/js/*.js', ['reload']);
 	gulp.watch('src/css/**/*.css', ['css']);
-    gulp.watch('src/js/**/*.js', ['scripts','reload']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
     gulp.watch('dist/*.html', ['reload']);
 
     // Uncomment for asset extraction
