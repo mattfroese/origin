@@ -1,18 +1,17 @@
 @import "variables.css";
-
 @import "effects/parallax.css";
-
-@import "components/header.css";
-@import "components/footer.css";
-@import "components/cover.css";
-@import "components/section.css";
-
-html {
-    height: 100%;
+@import "base/fonts.css";
+@import "base/header.css";
+@import "base/footer.css";
+@import "base/cover.css";
+@import "base/section.css";
+@import "base/buttons.css";
+@import "components/call-to-action.css";
+html, body {
+	height: 100%;
 }
-body {
-	font: $font-body-size $font-body;
-    height: 100%;
-    color: #333;
-    -webkit-font-smoothing: antialiased;
+a {
+	&:focus, &:hover {
+		text-decoration: none;
+	}
 }

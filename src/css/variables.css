@@ -1,5 +1,5 @@
 $color-brand: #267DF4;
-$color-dark: dimgrey;
+$color-dark: rgba(51,51,51,0.6);
 
 $font-body-size: 11pt;
 $font-body: 'Poppins', sans-serif;
@@ -19,3 +19,5 @@ $screen-xs-max: 480px;
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
+
+$border-radius: 6px;

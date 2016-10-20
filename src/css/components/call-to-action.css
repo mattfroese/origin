@@ -1,0 +1,15 @@
+section.call-to-action {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.3em;
+
+	@media (min-width: $screen-sm-min) {
+		padding:50px 0;
+	}
+	&.dark {
+		color: #fff;
+		background: $section-dark-bg-color;
+	}
+}
