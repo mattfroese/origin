@@ -71,7 +71,7 @@ gulp.task('stream', function () {
         server: "./dist"
     });
 
-	gulp.watch('dist/css/main.css', ['reload']);
+	gulp.watch('dist/css/*.css', ['reload']);
 	gulp.watch('src/css/**/*.css', ['css']);
     gulp.watch('src/js/**/*.js', ['scripts','reload']);
     gulp.watch('dist/*.html', ['reload']);

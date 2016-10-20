@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/origin.css">
 </head>
 <body>
-	<header class="header dark nav-stacked">
+	<header class="header header-fixed dark" data-scrolled="30">
 		<div class="container">
 			<a class="nav-toggle" data-target=".toggle1">
 				<span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -28,13 +28,14 @@
 	</header>
 	<section class="page light">
 		<div class="container">
-			<h2>Shticky</h2>
-<pre><code>&lt;header class="header nav-sticky"&gt;
+			<h2>Sticky</h2>
+<pre><code>&lt;header class="header" data-sticky&gt;
 </code></pre>
-
+			<h3>Mobile Full Height</h3>
+			<p>To get a full height menu when expanding on mobile add class="mobile-full-height" to the &lt;nav
 		</div>
 	</section>
-	<header class="header dark" data-shticky="nav-scrolled">
+	<header class="header dark" data-sticky="header-fixed">
 		<div class="container">
 			<a class="nav-toggle" data-target=".toggle1">
 				<span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -45,23 +46,33 @@
 			<div class="text left">
 				Sticky, when necessary
 			</div>
-			<nav class="nav-toggle-container toggle1 text-right">
+			<nav class="nav-toggle-container toggle1 right mobile-full-height">
 				<ul>
+					<li>
+						<a href="index.html">Home</a>
+						<div class="sub-nav">
+							<ul class="nav">
+								<li><a href="#">Left or Right Menu</a></li>
+								<li><a href="#">Classic Stacked</a></li>
+								<li><a href="#">Classic Nav Below</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="index.html">Home</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<section class="page light">
+	<section class="page">
 		<div class="container">
 			<h2>Nav Stack</h2>
 			<p>+ some div reorganization</p>
 <pre><code>&lt;header class="header nav-stack"&gt;
 </code></pre>
-
 		</div>
 	</section>
-	<header class="header dark nav-stack">
+	<header class="header dark nav-stack" data-sticky="header-fixed">
 		<div class="container">
 			<a class="nav-toggle" data-target=".toggle1">
 				<span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -109,6 +120,13 @@
 					<li><a href="index.html">Home</a></li>
 					<li>
 						<a href="#">Headers</a>
+						<div class="sub-nav">
+							<ul class="nav">
+								<li><a href="#">Left or Right Menu</a></li>
+								<li><a href="#">Classic Stacked</a></li>
+								<li><a href="#">Classic Nav Below</a></li>
+							</ul>
+						</div>
 					</li>
 					<li><a href="footers.html">Footers</a></li>
 					<li><a href="multi-cover.html">Multi-Cover</a></li>
@@ -146,6 +164,14 @@
 					<li><a href="index.html">Home</a></li>
 					<li>
 						<a href="#">Headers</a>
+						<div class="sub-nav">
+							<ul class="nav">
+								<li class="title">Classic</li>
+								<li><a href="#">Left or Right Menu</a></li>
+								<li><a href="#">Classic Stacked</a></li>
+								<li><a href="#">Classic Nav Below</a></li>
+							</ul>
+						</div>
 					</li>
 					<li><a href="footers.html">Footers</a></li>
 					<li><a href="multi-cover.html">Multi-Cover</a></li>
@@ -175,6 +201,31 @@
 					<li><a href="index.html">Home</a></li>
 					<li>
 						<a href="#">Headers</a>
+						<div class="sub-nav mega">
+							<div class="container">
+								<div class="col-md-4">
+									<ul class="nav">
+										<li class="title">Classic</li>
+										<li><a href="#">Left or Right Menu</a></li>
+										<li><a href="#">Classic Stacked</a></li>
+										<li><a href="#">Classic Nav Below</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="nav">
+										<li class="title">Centered</li>
+										<li><a href="header_center.html">Centered Logo</a></li>
+										<li><a href="header_center_below.html">Nav Below</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<ul class="nav">
+										<li class="title">More</li>
+										<li><a href="#">Mega sub nav</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</li>
 					<li><a href="footers.html">Footers</a></li>
 					<li><a href="multi-cover.html">Multi-Cover</a></li>
@@ -195,53 +246,7 @@
 		<div class="bg parallax" data-parallax-img="/img/header.jpg"></div>
 		<div class="content">
 			<h1>Origin</h1>
-			<p class="text">A kick butt template</p>
-		</div>
-	</section>
-	<section class="page">
-		<div class="content container">
-			<div class="col-md-4">
-				<h2>Headers</h2>
-				<p><a href="header_classic.html">Classic</a></p>
-				<p><a href="header_classic_stacked.html">Classic Stacked</a></p>
-				<p><a href="header_classic_nav_below.html">Classic - Nav Below</a></p>
-
-				<h2>Colour Variants</h2>
-
-				<p><a href="header_light.html">Light</a></p>
-				<p><a href="header_dark.html">Dark</a></p>
-				<p><a href="header_transparent.html">Transparent</a></p>
-
-			</div>
-			<div class="col-md-4">
-				<h2>Centered</h2>
-
-				<p><a href="header_center.html">Centered</a></p>
-				<p><a href="header_center_below.html">Centered - Nav Below</a></p>
-
-				<h2>Other</h2>
-
-				<p><a href="header_mega_nav.html">Mega nav</a></p>
-
-			</div>
-		</div>
-	</section>
-	<section class="page parallax" data-parallax-img="/img/header.jpg">
-		<div class="container">
-			<h2>A Parallax</h2>
-
-			<p>Just some ordinary text
-				<br />with some breaks to provide
-				<br />cool text effects.</p>
-		</div>
-	</section>
-	<section class="page light">
-		<div class="container">
-			<h2>Regular section</h2>
-
-			<p>Just some ordinary text
-				<br />with some breaks to provide
-				<br />cool text effects.</p>
+			<p class="text">Just the beginning.</p>
 		</div>
 	</section>
 

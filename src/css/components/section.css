@@ -1,6 +1,8 @@
 section.page {
-	padding: 80px 0;
-
+	padding: 20px;
+	@media (min-width: $screen-sm-min) {
+		padding: 60px 0;
+	}
 	.content {
 		position: relative;
 	}
