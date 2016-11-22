@@ -16,6 +16,7 @@ $(document).ready(function() {
 			addClassActive: true,
 			autoPlay: $(this).data("autoplay") ? $(this).data("autoplay") : false,
 			pauseOnHover: $(this).data("pause-hover") ? $(this).data("pause-hover") : false,
+			dots: $(this).data("dots") ? $(this).data("dots") : false,
 			navigation: $(this).data("navigation") ? $(this).data("navigation") : false,
 			navigationText: ["<i class=\"material-icons\">navigate_before</i>", "<i class=\"material-icons\">navigate_next</i>"]
 		});

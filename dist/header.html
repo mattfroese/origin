@@ -29,13 +29,76 @@
 		</div>
 	</header>
 	<section class="section center">
-		<div class="bg"><img src="/img/header.jpg" alt="" /></div>
+		<div class="bg"><img src="img/header.jpg" alt="" /></div>
 		<div class="container">
-			<h1>navbar?</h1>
+			<h1>&lt;header&gt;</h1>
 			<p>It's a header.</p>
 		</div>
 	</section>
-
+	<section class="page light">
+		<div class="container">
+			<h2>Markup</h2>
+			<pre><code>&#x3C;header class=&#x22;header&#x22;&#x3E;
+  &#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;a class=&#x22;nav-toggle&#x22; data-target=&#x22;.toggle&#x22;&#x3E;
+      &#x3C;span class=&#x22;bar&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;span class=&#x22;bar&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;span class=&#x22;bar&#x22;&#x3E;&#x3C;/span&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;logo&#x22;&#x3E;
+      &#x3C;a href=&#x22;#&#x22;&#x3E;Origin&#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;text left&#x22;&#x3E;
+      Left text
+    &#x3C;/div&#x3E;
+    &#x3C;nav class=&#x22;toggle right&#x22;&#x3E;
+      &#x3C;ul&#x3E;
+        &#x3C;li&#x3E;
+          &#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;
+          &#x3C;div class=&#x22;sub-nav&#x22;&#x3E;
+            &#x3C;ul class=&#x22;nav&#x22;&#x3E;
+              &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Left or Right Menu&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Classic Stacked&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Classic Nav Below&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;/ul&#x3E;
+          &#x3C;/div&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+    &#x3C;/nav&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/header&#x3E;
+</code></pre>
+		</div>
+	</section>
+	<header class="header dark">
+		<div class="container">
+			<a class="nav-toggle" data-target=".toggle">
+				<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+			</a>
+			<div class="logo">
+				<a href="#">Origin</a>
+			</div>
+			<div class="text left">
+				Left text
+			</div>
+			<nav class="toggle right">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+						<div class="sub-nav">
+							<ul class="nav">
+								<li><a href="#">Left or Right Menu</a></li>
+								<li><a href="#">Classic Stacked</a></li>
+								<li><a href="#">Classic Nav Below</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Home</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<section class="page light">
 		<div class="container">
 			<h2>Sticky</h2>
@@ -46,7 +109,7 @@
 		</div>
 	</section>
 	<section class="section center">
-		<div class="bg"><img src="/img/header.jpg" alt="" /></div>
+		<div class="bg"><img src="img/header.jpg" alt="" /></div>
 		<div class="container">
 			<h1>Not under fixed Section</h1>
 			<p>Great for headings</p>
@@ -260,7 +323,7 @@
 	</header>
 	<!-- cover with centered text-->
 	<section class="cover">
-		<div class="bg parallax" data-parallax-img="/img/header.jpg"></div>
+		<div class="bg parallax" data-parallax-img="img/header.jpg"></div>
 		<div class="content">
 			<h1>Origin</h1>
 			<p class="text">Just the beginning.</p>
